@@ -1,0 +1,35 @@
+﻿@model SendingDetails
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <form asp-action="SendingMail" asp-controller="Home">
+        <div class="bodycard m-5 p3">
+            <div class="mb-3">
+                <label asp-for="To" class="form-label">To</label>
+                <input type="email" name="TO" class="form-control" >
+            </div>
+            <div class="mb-3">
+                <label asp-for="Bcc" class="form-label">BCC</label>
+                <input type="email" name="BCC" class="form-control" >
+            </div>
+            <div class="mb-3">
+                <label asp-for="CC" class="form-label">CC</label>
+                <input type="email" name="CC" class="form-control" >
+            </div>
+            <div class="mb-3">
+                <label asp-for="Subject" class="form-label">Subject</label>
+                <input name="Subject" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Message" class="form-label">Message</label>
+                <textarea class="form-control" name="Message" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Send Mail" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+</div>
